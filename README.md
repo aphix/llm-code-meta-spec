@@ -13,13 +13,13 @@
 
 ## 1. Motivation
 
-Every byte shoveled into an LLM’s maw costs tokens, and thus time, power, and, if you’re unlucky, actual money.  When local models are small but fast—like those running under Devstral or OpenClaw—a single misplaced comment can push a prompt over its efficiency edge.
+Every byte shoveled into an LLM’s maw costs tokens, and thus time, power, and, if you’re unlucky, actual money.  When local models are small but fast—like those running under OpenHands or OpenClaw—a single misplaced comment can push a prompt over its efficiency edge.
 
 So the emerging consensus: don’t make models read what can be summarized.
 
 A compact **header block** at the top of a file which defines **inputs**, **outputs**, and the **intent** of the code beneath forms an elegant contract.  Humans skim it for documentation, machines treat it as an executable schema.  The rest of the file can sleep undisturbed until someone needs it.
 
-This specification defines that header, its update automation, and expected model behavior when such headers appear.
+This specification defines that header, describes update automation, and expected model behavior when such headers appear.
 
 ***
 
@@ -40,8 +40,9 @@ Exclusions:
 
 ## 3. High‑Level Concept
 
-At file load or save, a local agent parses top‑level signatures, I/O patterns, and metadata tokens.
-It then updates or generates a **header block**, formatted as comments native to the language.
+At file load or save, a local agent parses top‑level signatures, I/O patterns, and metadata tokens. The agent can then decide to keep reading or not, depending on it's current goal.
+
+Optionally, the system can update or generate a **header block**, formatted as comments native to the language. No headers actually need to be present if they can be generated cheaply and do not already exist. Updating or generating on the fly is less noisy and zero-cost, but also a less effective alternative to curated headers.
 
 Example (JavaScript style):
 
