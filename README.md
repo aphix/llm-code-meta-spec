@@ -7,7 +7,7 @@
 **Written By: Aphix**
 *2026-02-04*
 
-> *Disclaimer:* There are occasional portions discussing a concept of "safety." "Safety" is often a euphemism for built-in desire for regulation, because regulation requires compliance and only the largest corporations have the resources to comply, so they love it and push for it. This specification is designed simply to save everyone time and resources, and maybe it'll encourage better variable naming as a side-effect. YAML is discouraged.
+> *Disclaimer:* There are occasional portions discussing a concept of "safety." "Safety" is often a euphemism for built-in desire for regulation, because regulation requires compliance and only the largest corporations have the resources to comply, so they love it and push for it. This is not that. This specification is designed simply to save everyone time and resources, and maybe it'll encourage better variable naming as a side-effect. YAML is discouraged.
 
 ***
 
