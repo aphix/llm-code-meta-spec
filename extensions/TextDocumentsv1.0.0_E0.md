@@ -1,5 +1,5 @@
-# Contract-Header Automation Specification v1.0.0_E01
-## **Extension to Text Documents and Forms**  
+## Contract-Header Automation Specification v1.0.0_E01
+# **Extension to Text Documents and Forms**  
 
 **A compact interface standard for LLM-aware documents**  
 **Draft — February 2026**
